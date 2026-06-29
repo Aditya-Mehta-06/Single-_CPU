@@ -1,0 +1,429 @@
+
+*** Running vivado
+    with args -log CPU_Single_Cycle.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU_Single_Cycle.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Jun  6 10:46:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source CPU_Single_Cycle.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 526.008 ; gain = 221.164
+Command: read_checkpoint -auto_incremental -incremental C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/utils_1/imports/synth_1/CPU_Single_Cycle.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/utils_1/imports/synth_1/CPU_Single_Cycle.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top CPU_Single_Cycle -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18560
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1249.215 ; gain = 541.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPU_Single_Cycle' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/CPU_Single_Cycle.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Program_Counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Program_Counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_4' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/PC_4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC_4' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/PC_4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Memory' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Instruction_Memory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Memory' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Instruction_Memory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Decode' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Instruction_Decode.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Decode' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Instruction_Decode.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_Dst_Mux' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Reg_Dst_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_Dst_Mux' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Reg_Dst_Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Register_File_32_32' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Register_File_32_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File_32_32' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Register_File_32_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Sign_Extension' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Sign_Extension.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Sign_Extension' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Sign_Extension.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Shift_2_Branch' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Shift_2_Branch.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Shift_2_Branch' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Shift_2_Branch.v:23]
+WARNING: [Synth 8-689] width (26) of port connection 'Imm26' does not match port width (32) of module 'Shift_2_Branch' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/CPU_Single_Cycle.v:89]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Target_Adder' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Branch_Target_Adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Target_Adder' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Branch_Target_Adder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_Mux' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/PC_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC_Mux' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/PC_Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Control_Unit' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Control_Unit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Control_Unit' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Control_Unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUSrc_Mux' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALUSrc_Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALUSrc_Mux' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALUSrc_Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Control_Unit' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALU_Control_Unit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Control_Unit' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALU_Control_Unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32_bit' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALU_32_bit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32_bit' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/ALU_32_bit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Data_Memory' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Data_Memory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Data_Memory' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Data_Memory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MemtoReg_Mux' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/MemtoReg_Mux.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/MemtoReg_Mux.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'MemtoReg_Mux' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/MemtoReg_Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Jump_Address' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Jump_Address.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Jump_Address' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Jump_Address.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Zero_Extention' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Zero_Extention.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Zero_Extention' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/Zero_Extention.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CPU_Single_Cycle' (0#1) [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/CPU_Single_Cycle.v:23]
+WARNING: [Synth 8-7129] Port PC4[27] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[26] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[25] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[24] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[23] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[22] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[21] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[20] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[19] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[18] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[17] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[16] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[15] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[14] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[13] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[12] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[11] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[10] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[9] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[8] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[7] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[6] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[5] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[4] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[3] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[2] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[1] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC4[0] in module Jump_Address is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Imm26[31] in module Shift_2_Branch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Imm26[30] in module Shift_2_Branch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Imm26[29] in module Shift_2_Branch is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Imm26[28] in module Shift_2_Branch is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.484 ; gain = 660.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.484 ; gain = 660.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1368.484 ; gain = 660.930
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1368.484 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/constrs_1/new/timing_cpu.xdc]
+Finished Parsing XDC File [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/constrs_1/new/timing_cpu.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1435.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1435.996 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1435.996 ; gain = 728.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1435.996 ; gain = 728.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1435.996 ; gain = 728.441
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'WriteData_reg' [C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.srcs/sources_1/new/MemtoReg_Mux.v:35]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1435.996 ; gain = 728.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	  49 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 1     
+	  11 Input    5 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 3     
+	  11 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port Address[31] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[30] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[29] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[28] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[27] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[26] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[25] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[24] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[23] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[22] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[21] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[20] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[19] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[18] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[17] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[16] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[15] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[14] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[13] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[12] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[11] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[10] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[1] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address[0] in module Data_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[31] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[30] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[29] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[28] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[27] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[26] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[25] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[24] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[23] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[22] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[21] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[20] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[19] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[18] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[17] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[16] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[15] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[14] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[13] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[12] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[11] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[10] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[9] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[8] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[1] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC[0] in module Instruction_Memory is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[31]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[30]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[29]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[28]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[27]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[26]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[25]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[24]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[23]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[22]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[21]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[20]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[19]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[18]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[17]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[16]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[15]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[14]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[13]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[12]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[11]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[10]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[9]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[8]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[7]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[6]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[5]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[4]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[3]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[2]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[1]) is unused and will be removed from module CPU_Single_Cycle.
+WARNING: [Synth 8-3332] Sequential element (mem_mux/WriteData_reg[0]) is unused and will be removed from module CPU_Single_Cycle.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1459.848 ; gain = 752.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------+-------------+-----------+----------------------+-----------------+
+|Module Name      | RTL Object  | Inference | Size (Depth x Width) | Primitives      | 
++-----------------+-------------+-----------+----------------------+-----------------+
+|CPU_Single_Cycle | dm/DMEM_reg | Implied   | 256 x 32             | RAM256X1S x 32  | 
+|CPU_Single_Cycle | rf/Reg_reg  | Implied   | 32 x 32              | RAM32M x 12     | 
++-----------------+-------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1570.672 ; gain = 863.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1670.367 ; gain = 962.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------+-------------+-----------+----------------------+-----------------+
+|Module Name      | RTL Object  | Inference | Size (Depth x Width) | Primitives      | 
++-----------------+-------------+-----------+----------------------+-----------------+
+|CPU_Single_Cycle | dm/DMEM_reg | Implied   | 256 x 32             | RAM256X1S x 32  | 
+|CPU_Single_Cycle | rf/Reg_reg  | Implied   | 32 x 32              | RAM32M x 12     | 
++-----------------+-------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1670.367 ; gain = 962.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    36|
+|3     |LUT1      |     1|
+|4     |LUT2      |    51|
+|5     |LUT3      |    77|
+|6     |LUT4      |    75|
+|7     |LUT5      |    71|
+|8     |LUT6      |   222|
+|9     |RAM256X1S |    32|
+|10    |RAM32M    |    10|
+|11    |RAM32X1D  |     4|
+|12    |FDRE      |    32|
+|13    |IBUF      |     2|
+|14    |OBUF      |    64|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 83 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 1845.797 ; gain = 1070.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1845.797 ; gain = 1138.242
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1854.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1858.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete | Checksum: abbf945f
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1858.715 ; gain = 1325.934
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1858.715 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adity/Single_cycle_cpu/Single_Cycle_Processor.runs/synth_1/CPU_Single_Cycle.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file CPU_Single_Cycle_utilization_synth.rpt -pb CPU_Single_Cycle_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  6 10:48:00 2026...

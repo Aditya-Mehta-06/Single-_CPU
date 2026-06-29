@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/ALUSrc_Mux.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/ALU_32_bit.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/ALU_Control_Unit.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Branch_Target_Adder.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/CPU_Single_Cycle.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Control_Unit.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Data_Memory.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Instruction_Decode.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Instruction_Memory.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Jump_Address.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/MemtoReg_Mux.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/PC_4.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/PC_Mux.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Program_Counter.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Reg_Dst_Mux.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Register_File_32_32.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Shift_2_Branch.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Sign_Extension.v" \
+"../../../../Single_Cycle_Processor.srcs/sources_1/new/Zero_Extention.v" \
+"../../../../Single_Cycle_Processor.srcs/sim_1/new/tb_cpu.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
